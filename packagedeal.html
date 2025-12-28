@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Package Deals</title>
+    <style>
+        body { background: #0d1117; color: white; font-family: sans-serif; text-align: center; }
+        .pricing { display: flex; justify-content: center; gap: 20px; padding: 50px; }
+        .tier { border: 1px solid #30363d; padding: 30px; width: 250px; border-radius: 10px; }
+        .tier.pro { border-color: #00ff88; transform: scale(1.1); }
+        .price { font-size: 2rem; color: #00ff88; margin: 20px 0; }
+        button { background: #00ff88; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>CHOOSE YOUR PACKAGE</h1>
+    <div class="pricing">
+        <div class="tier">
+            <h3>SINGLE PIECE</h3>
+            <div class="price">$199</div>
+            <p>One original artwork print.</p>
+            <button onclick="alert('Added to cart')">SELECT</button>
+        </div>
+        <div class="tier pro">
+            <h3>ARTIST BUNDLE</h3>
+            <div class="price">$450</div>
+            <p>3 Prints + 1 Art Class Session.</p>
+            <button onclick="alert('Added to cart')">SELECT</button>
+        </div>
+    </div>
+    <a href="index.html" style="color: #888;">Home</a>
+</body>
+</html>
