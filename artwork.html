@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | Artwork</title>
+    <style>
+        body { background: #0d1117; color: white; font-family: sans-serif; margin: 0; }
+        .gallery-header { text-align: center; padding: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .art-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .art-card:hover { border-color: #00ff88; }
+        .art-card img { width: 100%; height: 400px; object-fit: cover; cursor: pointer; }
+        .info { padding: 15px; }
+        #viewer { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 10; }
+        #viewer img { max-width: 90%; max-height: 90%; }
+    </style>
+</head>
+<body>
+    <div class="gallery-header">
+        <h1>THE COLLECTION</h1>
+        <a href="index.html" style="color: #888;">Back to Home</a>
+    </div>
+    <div class="grid">
+        <div class="art-card">
+            <img src="IMG_7092.jpg" onclick="openImage(this.src)" alt="Moonlight Silhouette">
+            <div class="info"><h3>Celestial Dance</h3><p>Acrylic on Canvas</p></div>
+        </div>
+        <div class="art-card">
+            <img src="images/image.webp" onclick="openImage(this.src)" alt="Modern Vision">
+            <div class="info"><h3>Modern Vision</h3><p>Digital Composition</p></div>
+        </div>
+    </div>
+    <div id="viewer" onclick="this.style.display='none'"><img id="viewImg"></div>
+    <script>
+        function openImage(src) {
+            document.getElementById('viewImg').src = src;
+            document.getElementById('viewer').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
