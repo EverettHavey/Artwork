@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Art Classes</title>
+    <style>
+        body { background: #0d1117; color: white; font-family: sans-serif; }
+        .class-list { padding: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center; }
+        .class-item { background: #161b22; padding: 20px; width: 80%; border-radius: 8px; border: 1px solid #30363d; cursor: pointer; }
+        .class-item:hover { background: #1c2128; }
+        .details { display: none; padding-top: 10px; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="class-list">
+        <h1>UPCOMING CLASSES</h1>
+        <div class="class-item" onclick="toggle(this)">
+            <h3>Silhouette Masterclass</h3>
+            <div class="details">Learn to balance light and shadow using high-contrast techniques. Duration: 4 Weeks.</div>
+        </div>
+        <div class="class-item" onclick="toggle(this)">
+            <h3>Digital Texturing</h3>
+            <div class="details">Master the art of creating deep textures in a digital environment. Duration: 2 Weeks.</div>
+        </div>
+        <a href="index.html" style="color: #00ff88;">Home</a>
+    </div>
+    <script>
+        function toggle(el) {
+            const detail = el.querySelector('.details');
+            detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
