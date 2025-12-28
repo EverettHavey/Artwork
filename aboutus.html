@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        body { background: #0d1117; color: #c9d1d9; font-family: sans-serif; line-height: 1.6; }
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
+        h1 { color: #00ff88; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
+        .stats { display: flex; justify-content: space-around; margin-top: 40px; text-align: center; }
+        .stat-item h2 { font-size: 2.5rem; margin: 0; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OUR STORY</h1>
+        <p>Founded on the principle that art should be accessible and provocative, our gallery showcases the intersection of traditional silhouetted forms and modern digital textures.</p>
+        <div class="stats">
+            <div class="stat-item"><h2 class="count" data-target="150">0</h2><p>Artworks</p></div>
+            <div class="stat-item"><h2 class="count" data-target="12">0</h2><p>Exhibitions</p></div>
+            <div class="stat-item"><h2 class="count" data-target="500">0</h2><p>Students</p></div>
+        </div>
+        <br><a href="index.html" style="color: #00ff88;">Return Home</a>
+    </div>
+    <script>
+        document.querySelectorAll('.count').forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                if(count < target) {
+                    counter.innerText = count + 1;
+                    setTimeout(updateCount, 20);
+                }
+            };
+            updateCount();
+        });
+    </script>
+</body>
+</html>
